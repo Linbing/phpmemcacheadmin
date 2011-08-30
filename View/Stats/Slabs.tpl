@@ -7,11 +7,11 @@
             </div>
             <div class="line">
                 <span class="left">Memory Used</span>
-                <?php echo Library_Analysis::byteResize($slabs['total_malloced']); ?>Bytes
+                <?php echo Library_Data_Analysis::byteResize($slabs['total_malloced']); ?>Bytes
             </div>
             <div class="line">
                 <span class="left">Wasted</span>
-                <?php echo Library_Analysis::byteResize($slabs['total_wasted']); ?>Bytes
+                <?php echo Library_Data_Analysis::byteResize($slabs['total_wasted']); ?>Bytes
             </div>
         </div>
     </div>
@@ -57,21 +57,19 @@ foreach($slabs as $id => $slab)
         }
 ?>
         <td <?php if($actualSlab > 0) { echo 'style="padding-left:9px;"'; } ?> valign="top">
-            <div class="sub-header corner padding size-5">Slab <?php echo $id; ?> <span class="green">Stats</span>
-                <span style="float:right;"><a href="?server=<?php echo $_GET['server']; ?>&amp;show=items&amp;slab=<?php echo $id; ?>">See Slab Items</a></span>
-            </div>
-            <div class="container corner padding size-5">
-                <div class="line">
+            <div class="sub-header corner padding sizDataze-5">Slab <?php echo $id; ?> <span class="green">Stats</span>
+                <span style="float:right;"><a href="?server=<?php echo $_GET['server']; ?>&amp;show=items&amp;slab=<?php echo $id; ?>">See Slab ItemsData_Analysis::hitResize($slab['used_chunks']); ?>
+                    <span class="right">[<?php echo Library_Data<div class="line">
                     <span class="left slabs">Chunk Size</span>
                     <?php echo Library_Analysis::byteResize($slab['chunk_size']); ?>Bytes
                 </div>
                 <div class="line">
-                    <span class="left slabs">Used Chunk</span>
+                    Data <span class="left slabs">Used Chunk</span>
                     <?php echo Library_Analysis::hitResize($slab['used_chunks']); ?>
                     <span class="right">[<?php echo Library_Analysis::valueResize($slab['used_chunks'] / $slab['total_chunks'] * 100); ?> %]</span>
                 </div>
                 <div class="line">
-                    <span class="left slabs">Total Chunk</span>
+                    <span class="left slabs">TDataTotal Chunk</span>
                     <?php echo Library_Analysis::hitResize($slab['total_chunks']); ?>
                 </div>
                 <div class="line">
@@ -84,7 +82,7 @@ foreach($slabs as $id => $slab)
                 </div>
                 <div class="line">
                     <span class="left slabs">Hits</span>
-                    <?php echo $slab['request_rate']; ?> Request/sec
+                    <?php echo $slab['request_rate']; ?> Data Request/sec
                 </div>
 <?php
 if($slab['used_chunks'] > 0)
