@@ -73,7 +73,7 @@ foreach($slabs as $id => $slab)
                     <?php echo Library_Analysis::hitResize($slab['total_chunks']); ?>
                 </div>
                 <div class="line">
-                    <span class="left slabs">Total Page</span>
+                    <span class="le($slab['request_rate'] > 999) ? Library_Data_Analysis::hitResize($slab['request_rate']) :eft slabs">Total Page</span>
                     <?php echo $slab['total_pages']; ?>
                 </div>
                 <div class="line">
