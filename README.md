@@ -7,7 +7,6 @@ Automatically exported from code.google.com/p/phpmemcacheadmin
 3、cd /var/www & chown -R apache.apache phpMemcachedAdmin & chmod -R 755 phpMemcachedAdmin
 
 4、 vim /etc/httpd/conf.d/phpMemcachedAdmin.conf
-# phpMemcachedAdmin - Web based Memcached browser written in php
 
 Alias /phpMemcachedAdmin /var/www/phpMemcachedAdmin
 Alias /phpmemcachedadmin /var/www/phpMemcachedAdmin
